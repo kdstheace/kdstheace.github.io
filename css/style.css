@@ -160,25 +160,25 @@ font header .navbar-default .navbar-nav li a:hover {
   padding-top: 20px;
 }
 /*--
-	service Start 
+	skillsets Start 
 --*/
-#service {
+#skillsets {
   text-align: center;
   padding: 90px 0;
 }
-#service .service-item {
+#skillsets .skillsets-item {
   padding-bottom: 30px;
 }
-#service .service-item i {
+#skillsets .skillsets-item i {
   font-size: 60px;
   color: #4a4656;
 }
-#service .service-item h4 {
+#skillsets .skillsets-item h4 {
   padding-top: 20px;
   margin: 0;
   color: #666;
 }
-#service .service-item p {
+#skillsets .skillsets-item p {
   color: #888;
   padding-top: 10px;
   margin: 0;
