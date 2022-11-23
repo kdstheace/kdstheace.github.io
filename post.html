@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Dongsoo's Blog
 ---
 
 {% include subpage-header.html %}
@@ -13,37 +12,36 @@ title: Dongsoo's Blog
         <!-- Blog Post -->
 
         <!-- Title -->
-        <h1>Time is an illusion. Lunchtime doubly so.</h1>
+        <h1>{{ page.title }}</h1>
 
         <!-- Author -->
-        <p class="lead">by <a href="#">Jana Bergant</a></p>
+        <p class="lead">by {{ page.author }}</p>
 
         <hr />
 
         <!-- Date/Time -->
         <p>
-          <span class="glyphicon glyphicon-time"></span> Posted on January 08,
-          2016
+          <span class="glyphicon glyphicon-time"></span>
+          Posted on {{ page.date | date: "%B %d, %Y" }}
         </p>
 
         <hr />
 
         <!-- Preview Image -->
+        {% if page.image %}
         <img
           class="img-responsive"
-          src="http://placehold.it/900x300"
-          alt="Time is an illusion. Lunchtime doubly so."
+          src="{{ page.image }}"
+          alt="{{ page.title }}"
         />
+        {% endif %}
 
         <hr />
 
         <!-- Post Content -->
-
-        <p class="lead">
-          If there is a lesson to be learned, it is the futility of seeking
-          fulfillment in outer space. We need to judge ourselfs by who we are,
-          not by where we go.
-        </p>
+        {% if page.lead %}
+        <p class="lead">{{ page.lead }}</p>
+        {% endif %}
 
         <p>
           Never in all their history have men been able truly to conceive of the
