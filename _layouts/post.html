@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+{% include subpage-header.html %}
+<!-- POST HTML -->
+<article id="post">
+  <div class="container">
+    <div class="row">
+      <!-- Blog Post Content Column -->
+      <div class="col-lg-8">
+        <!-- Blog Post -->
+
+        <!-- Title -->
+        <h1>{{ page.title }}</h1>
+
+        <!-- Author -->
+        <p class="lead">by {{ page.author }}</p>
+
+        <hr />
+
+        <!-- Date/Time -->
+        <p>
+          <span class="glyphicon glyphicon-time"></span>
+          Posted on {{ page.date | date: "%B %d, %Y" }}
+        </p>
+
+        <hr />
+
+        <!-- Preview Image -->
+        {% if page.image %}
+        <img
+          class="img-responsive"
+          src="{{ page.image }}"
+          alt="{{ page.title }}"
+        />
+        <hr />
+        {% endif %}
+
+        <!-- Post Content -->
+        {% if page.lead %}
+        <p class="lead">{{ page.lead }}</p>
+        {% endif %}
+
+        <!-- Post Content -->
+        {{ page.content }} {% if page.previous %}
+        <hr />
+
+        <span class="previous-link">
+          <a rel="prev" href="{{ page.previous.url }}">Previous article</a>
+        </span>
+        {% endif %}
+        <!--  -->
+        {% if page.next %}
+        <span class="next-link pull-right">
+          <a rel="next" href="{{ page.next.url }}">Next article</a>
+        </span>
+        {% endif %}
+
+        <hr />
+      </div>
+
+      <!-- Blog Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Blog Categories Well -->
+        <div class="well">
+          {% for category_name in page.categories limit:1 %}
+          <h4>{{ category_name | capitalize }}</h4>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="list-unstyled">
+                {% for post in site.categories[category_name] limit:5 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+
+          <!-- /.row -->
+        </div>
+
+        <!-- Side Widget Well -->
+        <div class="well">{% include contact-info.html %}</div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+</article>
+
+<!-- Call to action Start -->
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2>We design delightful digital experiences.</h2>
+          <p>
+            Read more about what we do and our philosophy of design. Judge for
+            yourself The work and results we’ve achieved for other clients, and
+            meet our highly experienced Team who just love to design.
+          </p>
+          <a class="btn btn-default btn-call-to-action" href="#"
+            >Tell Us Your Story</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

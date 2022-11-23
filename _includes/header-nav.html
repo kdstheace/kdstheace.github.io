@@ -22,9 +22,27 @@
       <ul class="nav navbar-nav navbar-right">
         <li {% if page.url == "/" %}class="active"{% endif %}><a href="index.html">Home</a></li>
         <li {% if page.url == "/about-me.html" %}class="active"{% endif %}><a href="about-me.html">About Me</a></li>
-        <li {% if page.url == "/portfolio.html" %}class="active"{% endif %}><a href="portfolio.html">Portfolio</a></li>
+        <!-- <li {% if page.url == "/portfolio.html" %}class="active"{% endif %}><a href="portfolio.html">Portfolio</a></li> -->
         <li {% if page.url == "/blog.html" %}class="active"{% endif %}><a href="blog.html">Blog</a></li>
-        <li {% if page.url == "/contact.html" %}class="active"{% endif %}><a href="contact.html">Contact</a></li>
+        <!-- <li {% if page.url == "/contact.html" %}class="active"{% endif %}><a href="contact.html">Contact</a></li> -->
+
+        <li class="nav-item dropdown @@portfolio">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">TechBlog <span class="ion-ios-arrow-down"></span></a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown03">
+            <li {% if page.url == "/Java.html" %}class="active"{% endif %}><a class="dropdown-item" href="Java.html">Java</a></li>
+            <li {% if page.url == "/Network.html" %}class="active"{% endif %}><a class="dropdown-item" href="Network.html">Network</a></li>
+            <li {% if page.url == "/Algorithm.html" %}class="active"{% endif %}><a class="dropdown-item" href="Algorithm.html">Algorithm</a></li>
+            <!-- <li class="dropdown dropdown-submenu dropright">
+              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdown0301">
+                <li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+                <li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+              </ul>
+            </li> -->
+          </ul>
+        </li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->

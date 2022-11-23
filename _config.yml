@@ -29,6 +29,7 @@ github_username: kdstheace
 
 # Build settings
 markdown: kramdown
+permalink: none
 plugins:
   - jekyll-feed
 # Exclude from processing.

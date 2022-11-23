@@ -61,6 +61,18 @@ px      68    160    252    344    436    528    620    712    */
   footer .navbar-default .navbar-nav li a:hover {
     color: #000;
   }
+
+  .dropdown-submenu:hover > .dropdown-item,
+  .dropdown-item:hover {
+    background: #000;
+    color: #494949;
+  }
+
+  .dropdown-submenu.active > .dropdown-toggle {
+    text-decoration: underline;
+    color: inherit;
+  }
+
   /*---------------------------------------------
 					Index Close 
 -----------------------------------------------*/
