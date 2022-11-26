@@ -9,7 +9,7 @@ lead:
 category: Database
 ---
 
-Last week, one of our database stopped because one of my collegues did not commit his updates query and seems like it excludes other transaction in terms of Isolation level "READ_COMMITTED". I could understand how embarassing the moment was for him. And it reminds us of the importance of understanding transactions and isolation level.
+Last week, one of our database stopped because one of my colleagues did not commit his updates query and seems like it excludes other transaction in terms of Isolation level "READ_COMMITTED". I could understand how embarassing the moment was for him. And it reminds us of the importance of understanding transactions and isolation level.
 
 ## **1. Definition of Transaction**
 
@@ -65,12 +65,12 @@ Lastly, if I execute rollback, then DBMS read UnDo log backward and recover the 
 
 ## **4. Isolation Level**
 
-As you can see in the image on the top of this post, as you go down, the concurrency decreases however consistency increases.
+As you can see in the image on the top of this post, as you go down, the concurrency decreases however consistency increases, performance decreases.
 
-1. **READ_UNCOMMITTED**: uncomitted data can be read by another transaction which is known as **"Dirty Read"**
+1. **READ_UNCOMMITTED**: uncomitted data can be read by another transaction which is known as **"Dirty Read"**.
    > **Dirty Read**
 2. **READ_COMMITTED**: another transaction only can read the committed data.<br>
    > **Non-Repeatable Read**: Even though it was same select Query, the result can be different if the other transaction update that data.
-3. **REPEATABLE_READ**: Isolation means each transaction should be independent to each other. Isolation levels is specified at the below.
-   > **Phantom Read**: Even though it was same select Query, the result can be different if the other transaction update that data.
-4. **SERIALIZABLE**: each transaction should wait until rows write-locked by other transactions becomes unlocked
+3. **REPEATABLE_READ**: each transaction should wait until rows write-locked by other transactions becomes unlocked.
+   > **Phantom Read**: Similar to non-repeatable read, the result of repeating select query returns the exact same row with the same content however, it can also return another row if the other transaction insert the row which satisfies the condition of the second select.
+4. **SERIALIZABLE**: Once the data is locked by one transaction, any transaction can not access that data
