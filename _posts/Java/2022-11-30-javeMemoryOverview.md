@@ -28,3 +28,5 @@ While processing, if there is new instances initialized, those are stored in Hea
 (image of Frame)
 
 ## **3. What is Frame in JVM Stacks?**
+
+Frame consists of **Current Class Constant pool references**, **local variables array**, **operand stacks**
