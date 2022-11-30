@@ -25,7 +25,7 @@ After .class file is loaded by the Class Loader and put into Method, JVM brings 
 
 While processing, if there is new instances initialized, those are stored in Heap area and every time the thread meets the method, it encapsulate with the Frame like the structure below and put it into stack.
 
-<img src='img/post_img/java/frame_layout.jpg' alt='frame' width='500px'><br>
+<img src='img/post_img/java/frame_layout.jpg' alt='frame' width='600px'><br>
 
 ## **3. What is Frame in JVM Stacks?**
 
