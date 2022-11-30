@@ -9,6 +9,8 @@ lead:
 category: Java
 ---
 
+//image made by DongsooKim
+
 How JVM works on the Memory?
 
 ## **1. Overview of Java Memory**
@@ -23,10 +25,11 @@ Method and Heap area are shared by threads so developer needs to consider concur
 
 After .class file is loaded by the Class Loader and put into Method, JVM brings byte codes from .class file to **Execute Engine** and translate it into the binary machine codes. With this proces, JVM enables the same Java application run in the different OS and that is why JAVA is well known for "Platform-independent".
 
-While processing, if there is new instances initialized, those are stored in Heap area and every time the thread meets the method, it encapsulate with the Frame like the structure below and put it into stack.
-
-<img src='img/post_img/java/frame_layout.jpg' alt='frame' width='600px'><br>
+While processing, if there is new instances initialized, those are stored in Heap area and every time the thread meets the method, it encapsulate with the Frame and put it into stack.
 
 ## **3. What is Frame in JVM Stacks?**
 
-Frame consists of **Current Class Constant pool references**, **local variables array**, **operand stacks**
+<img src='img/post_img/java/frame_layout.jpg' alt='frame' width='600px'><br>
+
+Frame consists of **Current Class Constant pool references**, **local variables array**, **operand stacks**.
+The reason it uses the datastructure array is to find the elements as fast as possible with index. At the very first index, it always contains this indicating current class. And input parameters and variables comes in a row. When it is required to sum the given input parameter(value 27) and localV(value 23), the sum operand would be stored in a stack. After the sum calculation is done, then it assign integer variable 'sum' with the result 50 as the byte code says. After it returns the certain result, and once method is done, it is removed from the JVM Stacks.
