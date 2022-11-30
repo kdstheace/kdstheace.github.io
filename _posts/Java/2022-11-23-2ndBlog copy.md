@@ -1,0 +1,10 @@
+---
+layout: post
+title: Functional Interfaces
+subtitle: Easy Lambda
+date: 2022-11-23 12:30
+author: Dongsoo Kim
+image: img/post_img/java/Java-Function-Example.png
+lead:
+category: Java
+---
