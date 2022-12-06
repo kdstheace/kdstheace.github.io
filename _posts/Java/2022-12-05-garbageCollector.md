@@ -49,4 +49,33 @@ Heap area largely consists of 2parts, **Young Generation(YG)**, **Old Generation
 
 Eden area is the one we saw at the previous image(Simple Heap Memory). Instances are stored in this area firstly. And once the Eden is full, Mark-Sweep-Compact begins which is called **minor GC**. And any instances survived from minor GC process are stored in Survivor 0. Each survived instance has its own age starts from 1. This age is incremented +1 as minor GC occurs.
 
+<img src='img/post_img/java/eden1.jpg' alt='frame' width='600px'><br>
+While application keep working and store other instances in Eden area, 2nd minor GC would be triggered once the area is full. In the graph, you can see instance k, o are reachable and can be survived from Mark-Sweep_Compact process. This time, the instances stored in survivor 0 moved to survivor 1 with survived instances k, o.
+
+<img src='img/post_img/java/eden2.jpg' alt='frame' width='600px'><br>
+And once the age of instance reaches the certain age, (in the graph, 8) the old enough intances go to **Old Generation** area. This process continue until the Old Generation area is full and **Major GC** is triggered. Contrary to the minor GC, Mark-Sweep-Compact is done at Old Generation area.
+
+<img src='img/post_img/java/eden3.jpg' alt='frame' width='600px'><br>
+
 ## **5. GC versions**
+
+#### 1) Serial GC
+
+1. GC process is undertaken by a single thread
+2. Long **Stop The World** time<br>
+   FYI) Stop The World: The time that every thread stops working while GC thread works
+
+#### 2) Parallel GC
+
+1. Java 8 default GC
+2. Multi GC thread is available in YG area
+
+#### 3) Parallel Old GC
+
+1. Multi GC thread is available in both YG and OG areas
+
+#### 4) G1 GC
+
+1. Above Java 9 default GC
+2. Heap area is divided into **Regions** and there are multiple Eden, Survivor, Old Generation areas.
+3. JVM scanning at the regional level
