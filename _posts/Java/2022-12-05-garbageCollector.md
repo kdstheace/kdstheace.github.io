@@ -24,7 +24,7 @@ Specifically, 3 items below can be GC Roots, and starting points for tracking an
 
 Here's an example.
 
-<img src='img/post_img/java/gcTracking.jpg' alt='frame' width='600px'><br>
+<img src='img/post_img/java/gc_tracking.jpg' alt='frame' width='600px'><br>
 For Item #1, data in JVM Stack Area can be the 'Local Variable Array' in 'FrameA'. Let's say objB is referring to B in Method area and it continusouly refers to instance b in Heap area. In this case, instance b is **reachable** object. So it is not removed by GC.
 
 For Item #2, static data in Method Area can be circle A(A.class). And A is referring to instance a in Heap Area, so instance a is reachable, and at the same time, when a refers to other instance like b, instance b is reachable as well.
