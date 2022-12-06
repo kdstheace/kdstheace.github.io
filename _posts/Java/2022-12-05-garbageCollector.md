@@ -38,7 +38,11 @@ In result, only the instance d is left and it is marked as unreachable instance 
 Overall, GC works following 3 steps; Mark, Sweep, Compact.
 Mark is the tracking and checking process to distinct reachable and unreachable objects. Sweep is removing the unreachable objects at the memory and Compact is the process that cosolidates all of the free areas by moving data from later parts of the memory to unused locations in earlier parts. The compact process may not exist depending on which GC version it uses.
 
-## **3. Marking Mechanism**
+<img src='img/post_img/java/markSweepCompact.jpg' alt='frame' width='600px'><br>
+
+In this case, data b, c, e are unreachable objects and removed by Sweep process. And the left objects are moved to the empty areas.
+
+## **3. Look closely on Heap Area**
 
 ## **4. Minor GC, Major GC**
 
