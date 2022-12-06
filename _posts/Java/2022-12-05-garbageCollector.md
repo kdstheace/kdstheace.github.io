@@ -42,8 +42,11 @@ Mark is the tracking and checking process to distinct reachable and unreachable 
 
 In this case, data b, c, e are unreachable objects and removed by Sweep process. And the left objects are moved to the empty areas.
 
-## **3. Look closely on Heap Area**
+## **3. minor GC, Major GC: Look closely on Heap Area**
 
-## **4. Minor GC, Major GC**
+Heap area largely consists of 2parts, **Young Generation(YG)**, **Old Generation(OG)**. In YG, there are **Eden area**, **Survival01(S01)**, **Survival02(S02)**.
+<img src='img/post_img/java/eden.jpg' alt='frame' width='600px'><br>
+
+Eden area is the one we saw at the previous image(Simple Heap Memory). Instances are stored in this area firstly. And once the Eden is full, Mark-Sweep-Compact begins which is called **minor GC**. And any instances survived from minor GC process are stored in Survivor 0. Each survived instance has its own age starts from 1. This age is incremented +1 as minor GC occurs.
 
 ## **5. GC versions**
