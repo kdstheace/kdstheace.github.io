@@ -5,11 +5,11 @@ subtitle: Why books still matter?
 date: 2022-04-09 12:30
 author: Dongsoo Kim
 image:
-lead: "leadleadlead"
+lead:
 category: Daily-Blog
 ---
 
-<iframe width="100%" height="360" src="https://www.youtube.com/embed/6Gw5dK48MtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="300" src="https://www.youtube.com/embed/6Gw5dK48MtI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I recently read an article saying, the ratio of people who read books is rapidly plummeting and people spend less than 10 minutes a day reading a book on average. New media or information sources such as Google search, Youtube video, Wikipedia replacing books is not a surprising news anymore. We can get as much as information as soon as we want, and simpler than ever. Then, I wonder what makes book still valuable and what makes people still spend their money and time buying, looking for good books. And based on what I experienced, I found two reasons why books should be here to stay.
 
