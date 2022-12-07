@@ -1,0 +1,32 @@
+<section id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        {% for post in site.posts %}{% if post.path contains 'Cs' %}
+        <!-- Blog Post -->
+        <h2>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <p class="lead">by {{ post.author }}</p>
+        <p>
+          <span class="glyphicon glyphicon-time"></span> Posted on {{ post.date
+          | date: "%B %d, %Y" }}
+        </p>
+        {% if page.image %}
+        <img
+          class="img-responsive"
+          src="{{ post.image }}"
+          alt="{{ post.title }}"
+        />
+        <hr />
+        {% endif %} {{ post.excerpt }}
+        <a class="btn btn-primary" href="{{ post.url }}"
+          >Read More <span class="glyphicon glyphicon-chevron-right"></span
+        ></a>
+
+        <hr />
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
