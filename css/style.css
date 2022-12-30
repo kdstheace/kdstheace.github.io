@@ -358,7 +358,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	Slider-work Start 
 --*/
 #global-header {
-  background: url("../img/slider-bg2.jpg") no-repeat;
+  background: url("../img/slider-bg.jpg") no-repeat;
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -607,7 +607,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	slider-contact Start 
 --*/
 #slider-contact {
-  background: url("../img/slider-bg2.jpg") no-repeat;
+  background: url("../img/slider-bg.jpg") no-repeat;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
