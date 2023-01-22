@@ -8,8 +8,17 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" placeholder="What is your name?" />
-    <button>Log In</button>
+    <form id="login-form" class="hidden">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <input type="submit" value="Log-In" />
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+
     <script src="app.js"></script>
   </body>
 </html>
