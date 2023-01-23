@@ -6,4 +6,4 @@ const backgroundImg = document.createElement("img");
 
 backgroundImg.src = `img/${chosenImg}`;
 
-document.body.appendChild(backgroundImg);
+document.body.prepend(backgroundImg);
