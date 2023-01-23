@@ -11,26 +11,25 @@
   </body>
   <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
-  <script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
     const root = document.querySelector("#root");
-    const h3 = React.createElement(
-      "h3",
-      {
-        id: "sexy-span",
-        style: { color: "red" },
-        onMouseEnter: () => console.log("Mouse Entered"),
-      },
-      "Hello, I'm a span"
+    const title = (
+      <h3 id="title" onMouseEnter={() => console.log("Mouse Entered")}>
+        Hello I'm a title
+      </h3>
     );
-    const btn = React.createElement(
-      "button",
-      {
-        style: { backgroundColor: "tomato" },
-        onClick: () => console.log("Clicked!"),
-      },
-      "Click Me!"
+
+    const btn = (
+      <button
+        style={{ backgroundColor: "tomato" }}
+        onClick={() => console.log("Clicked!")}
+      >
+        Click me
+      </button>
     );
-    const container = React.createElement("div", null, [h3, btn]);
+
+    const container = React.createElement("div", null, [title, btn]);
     ReactDOM.render(container, root);
   </script>
 </html>
