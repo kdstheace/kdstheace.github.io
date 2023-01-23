@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script>
+    const root = document.querySelector("#root");
+    const h3 = React.createElement(
+      "h3",
+      {
+        id: "sexy-span",
+        style: { color: "red" },
+        onMouseEnter: () => console.log("Mouse Entered"),
+      },
+      "Hello, I'm a span"
+    );
+    const btn = React.createElement(
+      "button",
+      {
+        style: { backgroundColor: "tomato" },
+        onClick: () => console.log("Clicked!"),
+      },
+      "Click Me!"
+    );
+    const container = React.createElement("div", null, [h3, btn]);
+    ReactDOM.render(container, root);
+  </script>
+</html>
