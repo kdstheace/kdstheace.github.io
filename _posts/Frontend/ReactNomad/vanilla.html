@@ -14,20 +14,19 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.querySelector("#root");
-    const Container = () => {
-      let [count, modifier] = React.useState(0);
-      const countUp = () => {
-        console.log("clicked!");
-        modifier(count + 1);
+    const App = () => {
+      let [count, modifiier] = React.useState(0);
+      const enter = () => {
+        console.log("entered!");
+        modifiier((count) => count + 3);
       };
       return (
         <div>
-          <span>Hello your count is {count}!</span>
-          <h1>WOW</h1>
-          <button onClick={countUp}>Click me !! </button>
+          <h1 onMouseEnter={enter}>Click count is {count}</h1>
         </div>
       );
     };
-    ReactDOM.render(<Container />, root);
+
+    ReactDOM.render(<App />, root);
   </script>
 </html>
