@@ -14,7 +14,8 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     const root = document.querySelector("#root");
-    const App = () => {
+    //Components
+    const TimeConverter = () => {
       const [inputAmt, setAmount] = React.useState(0);
       const [flipped, setFlip] = React.useState(false);
       const onChange = (event) => {
@@ -30,7 +31,6 @@
 
       return (
         <div>
-          <h1>Super Converter</h1>
           <div>
             <label htmlFor="minutes">Minutes</label>
             <input
@@ -54,10 +54,35 @@
             />
           </div>
           <button onClick={reset}>Reset</button>
-          <button onClick={flip}>Flip</button>
+          <button onClick={flip}>{flipped ? "Minutes" : "Hours"}</button>
         </div>
       );
     };
+    const DistanceConverter = () => {
+      return <h3>KM to Meters</h3>;
+    };
+    //RootComponent
+    const App = () => {
+      const [index, setIndex] = React.useState("x");
+      const onSelect = (event) => {
+        setIndex(event.target.value);
+      };
+      return (
+        <div>
+          <h1>Super Converter</h1>
+          <select value={index} onChange={onSelect}>
+            <option value="x">Select the options</option>
+            <option value="0">Time Converter</option>
+            <option value="1">Distance Converter</option>
+          </select>
+          <hr />
+          {index === "x" ? "Please select the options." : null}
+          {index === "0" ? <TimeConverter /> : null}
+          {index === "1" ? <DistanceConverter /> : null}
+        </div>
+      );
+    };
+    //Rendering
     ReactDOM.render(<App />, root);
   </script>
 </html>
