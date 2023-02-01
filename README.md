@@ -1,4 +1,7 @@
 # kdstheace.github.io
-Daniel's 2nd Blog.  
+Daniel's  
+DevBlog.  
 
 powered by Jekyll
+
+
